@@ -51,8 +51,14 @@ const correctText = function () {
 const emailType = function (email) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const status = emailPattern.test(email);
-    if (!status) emailError.classList.remove('hidden');
-    if (status) emailError.classList.add('hidden');
+    if (!status) {
+        emailError.classList.remove('hidden');
+        return false;
+    }
+    if (status) {
+        emailError.classList.add('hidden');
+        return true;
+    }
 };
 
 // EVENTS
@@ -95,7 +101,7 @@ submitBtn.addEventListener('click', function (e) {
     e.preventDefault();
     if (inputFile.files.length === 0) ErrorText();
     emailType(emailInput.value);
-    if (inputFile.files.length !== 0 && emailInput.value) {
+    if (inputFile.files.length !== 0 && emailType(emailInput.value)) {
         body.innerHTML = '';
         state = ticket();
         body.insertAdjacentHTML('afterbegin', state);
