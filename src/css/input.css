@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-Inconsolata: "Inconsolata";
+}
+
+@layer components {
+  .fields {
+    width: 100%;
+    height: 40px;
+    margin-top: 4px;
+    padding-left: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px;
+    border-color: #6a7282;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+  }
+  .bg-image {
+    z-index: 0;
+    position: absolute;
+  }
+  .icon-texts {
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+  }
+  .svg {
+    filter: oklab(70.486% 0.14328 0.08047);
+    -webkit-filter: hsl(7, 88%, 67%);
+    fill: hsl(7, 88%, 67%);
+    color: hsl(7, 88%, 67%);
+  }
+  .blur {
+    backdrop-filter: blur(var(--blur-xl));
+  }
+}

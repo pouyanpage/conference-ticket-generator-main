@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="./src/css/output.css" rel="stylesheet">
+  <script defer type="module" src="./src/js/app.js"></script>
+  <title>Frontend Mentor | Conference ticket generator</title>
+
+</head>
+
+<body
+  class="overflow-y-hidden font-Inconsolata relative flex justify-center items-center h-screen bg-[url(/assets/images/background-desktop.png)] bg-cover bg-no-repeat text-white">
+  <!-- background -->
+  <img class="bg-image left-0 bottom-0" src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="123">
+  <img class="bg-image right-0 top-0" src="./assets/images/pattern-squiggly-line-top.svg" alt="123">
+  <img class="bg-image top-0 opacity-60" src="./assets/images/pattern-lines.svg" alt="123">
+  <img class="bg-image right-[25%] bottom-48" src="./assets/images/pattern-circle.svg" alt="123">
+
+  <!-- form -->
+  <div class="hidden z-20 max-w-[500px]">
+    <div class="flex flex-col items-center">
+      <img class="w-52 mb-8" src="./assets/images/logo-full.svg" alt="123">
+      <h1 class="text-4xl font-bold mb-5">Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p>Secure your spot at next year's biggest coding conference.</p>
+    </div>
+    <!-- form -->
+    <div class="max-w-[350px] mx-auto mt-8">
+      <form class="flex flex-col gap-y-3">
+        <label class="uploadLabel relative">
+          <div class="hidden overlay absolute inset-0"></div>
+          <input class="hidden input" type="file" accept="image/*">
+          <span>Upload Avatar</span>
+          <div
+            class="uploadArea bg-white/5 mt-1 flex flex-col gap-y-2 items-center p-5 border border-gray-500 border-dashed rounded-xl cursor-pointer">
+            <img class="iconImg bg-white/10 border border-gray-500 rounded-xl w-12 h-12"
+              src="./assets/images/icon-upload.svg" alt="123">
+            <p class="upload-text"> Drag and drop or click to upload</p>
+            <div class="hidden edit-image flex gap-x-3 text-sm">
+              <button class="remove-image icon-texts z-50">Remove image</button>
+              <button class="change-image icon-texts z-50">Change image</button>
+            </div>
+          </div>
+          <div class="below-text">
+            <p class="active-text flex items-center gap-x-1 text-xs mt-1 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path stroke="#99a1af" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+                <path fill="" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path stroke="#99a1af" stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042" />
+              </svg>
+              Upload your photo (JPG or PNG, max size: 500KB).
+            </p>
+            <p class="size-error hidden text-[#f57261] flex items-center gap-x-1 text-xs mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path stroke="#f57261" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+                <path fill="" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path stroke="#f57261" stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042" />
+              </svg>
+              File too large. Please upload a photo under 500KB.
+            </p>
+          </div>
+        </label>
+        <label>
+          <p>Full Name</p>
+          <input class="fields giveFullName" type="text">
+        </label>
+        <label>
+          <p>Email Address</p>
+          <input class="email-value fields" type="email" placeholder="example@gmail.com">
+          <div class="below-text">
+            <p class="email-error hidden text-[#f57261] flex items-center gap-x-1 text-xs mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path stroke="#f57261" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+                <path fill="" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path stroke="#f57261" stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042" />
+              </svg>
+              Please enter a valid email address.
+            </p>
+          </div>
+        </label>
+        <label>
+          <p>GitHub Username</p>
+          <input type="text" class="fields giveUser" placeholder="@yourusername">
+        </label>
+        <button class="submitBtn font-bold py-2 rounded-md text-black bg-[#e16151] cursor-pointer">Generate My
+          Ticket</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ticket -->
+  <div class="hidden max-w-[600px] z-20">
+    <div class="flex flex-col items-center justify-center text-center gap-y-7">
+      <img class="w-52 mb-3" src="./assets/images/logo-full.svg" alt="123">
+      <h1 class="text-5xl font-bold">Congrats, <span
+          class="getFullName bg-gradient-to-r from-[#f37362] to-[#ffffff] text-transparent  bg-clip-text">Pouyan
+          Samadi</span>! Your ticket is ready.</h1>
+      <p class="max-w-[370px] text-gray-400">We've emailed your ticket to <span
+          class="getEmail text-[#f57261]">poyansamadi@gmail.com</span>
+        and
+        will send updates in
+        the run up to the
+        event.</p>
+    </div>
+    <div class="mt-20 max-w-[450px] mx-auto">
+      <div class="relative ">
+        <img class="w-full h-full backdrop-blur-xl" src="./assets/images/pattern-ticket.svg" alt="123">
+        <div class="absolute inset-0 flex items-center justify-between py-5 pl-5 pr-2">
+          <div class="flex flex-col h-full justify-between">
+            <div class="icon-ticket">
+              <img class="w-52" src="./assets/images/logo-full.svg" alt="123">
+              <p class="mt-2 pl-12 text-sm text-gray-500">Jan 31, 2025 / Austin, TX</p>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <div class="w-14 rounded-xl overflow-hidden">
+                <img class="get-image" src="./assets/images/image-avatar.jpg" alt="123">
+              </div>
+              <div class="">
+                <h3 class="getFullName text-xl">Jonatan Kristof</h3>
+                <div class="flex items-center gap-x-1">
+                  <img src="./assets/images/icon-github.svg" alt="github">
+                  <p class="getUser">@jonatanslskl</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="rotate-90 text-2xl text-gray-400">#01609</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
