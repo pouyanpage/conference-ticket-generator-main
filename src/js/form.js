@@ -5,7 +5,7 @@ export default function () {
   <img class="bg-image top-0 opacity-60" src="./assets/images/pattern-lines.svg" alt="123">
   <img class="bg-image right-[25%] bottom-48" src="./assets/images/pattern-circle.svg" alt="123">
     <div class=" z-20 max-w-[500px]">
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col items-center text-center">
       <img class="w-52 mb-8" src="./assets/images/logo-full.svg" alt="123">
       <h1 class="text-4xl font-bold mb-5">Your Journey to Coding Conf 2025 Starts Here!</h1>
       <p>Secure your spot at next year's biggest coding conference.</p>
