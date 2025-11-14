@@ -1,5 +1,10 @@
 export default function () {
-    return `<div class=" z-20 max-w-[500px]">
+  return `
+    <img class="bg-image left-0 bottom-0" src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="123">
+  <img class="bg-image right-0 top-0" src="./assets/images/pattern-squiggly-line-top.svg" alt="123">
+  <img class="bg-image top-0 opacity-60" src="./assets/images/pattern-lines.svg" alt="123">
+  <img class="bg-image right-[25%] bottom-48" src="./assets/images/pattern-circle.svg" alt="123">
+    <div class=" z-20 max-w-[500px]">
     <div class="flex flex-col items-center">
       <img class="w-52 mb-8" src="./assets/images/logo-full.svg" alt="123">
       <h1 class="text-4xl font-bold mb-5">Your Journey to Coding Conf 2025 Starts Here!</h1>

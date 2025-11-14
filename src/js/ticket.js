@@ -1,5 +1,10 @@
 export default function () {
-    return ` <div class="max-w-[600px] z-20">
+  return `
+    <img class="bg-image left-0 bottom-0" src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="123">
+  <img class="bg-image right-0 top-0" src="./assets/images/pattern-squiggly-line-top.svg" alt="123">
+  <img class="bg-image top-0 opacity-60" src="./assets/images/pattern-lines.svg" alt="123">
+  <img class="bg-image right-[25%] bottom-48" src="./assets/images/pattern-circle.svg" alt="123">
+     <div class="max-w-[600px] z-20">
     <div class="flex flex-col items-center justify-center text-center gap-y-7">
       <img class="w-52 mb-3" src="./assets/images/logo-full.svg" alt="123">
       <h1 class="text-5xl font-bold">Congrats, <span
